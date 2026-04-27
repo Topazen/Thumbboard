@@ -1,0 +1,12 @@
+# Claude Code
+.claude/
+
+# Compiled binaries
+thumbboard
+thumbboard.sh
+
+# Test artifacts
+test/
+
+# Empty artifact directories
+Thumboard/

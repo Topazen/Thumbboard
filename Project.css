@@ -1,9 +1,0 @@
-#include <iostream>
-#include <vector>
-
-int main() {
-    std::vector<std::vector<char>> example_grid = {
-    {'1', '2'}
-    {'3', '4'}
-    }
-};

@@ -1,0 +1,41 @@
+# Thumbboard code style.
+# Based on LLVM with adjustments common in modern Linux/Wayland projects.
+# Run: clang-format -i $(git ls-files '*.cpp' '*.hpp' '*.h')
+
+BasedOnStyle: LLVM
+Language: Cpp
+Standard: c++20
+
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 100
+
+AccessModifierOffset: -4
+NamespaceIndentation: None
+FixNamespaceComments: true
+
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakTemplateDeclarations: Yes
+
+BreakBeforeBraces: Attach
+BinPackArguments: false
+BinPackParameters: false
+AlignAfterOpenBracket: BlockIndent
+
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex:    '^<.*\.h>'
+    Priority: 1
+  - Regex:    '^<.*'
+    Priority: 2
+  - Regex:    '.*'
+    Priority: 3
+
+SortIncludes: CaseSensitive
+SortUsingDeclarations: true

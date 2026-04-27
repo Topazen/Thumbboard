@@ -1,0 +1,53 @@
+# Build directories
+build/
+builddir/
+build-*/
+out/
+
+# Meson
+.ninja_deps
+.ninja_log
+build.ninja
+compile_commands.json
+meson-info/
+meson-logs/
+meson-private/
+
+# Generated Wayland protocol code
+*-protocol.c
+*-protocol.h
+*-client-protocol.h
+
+# Compiled binaries / object files
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.exe
+
+# Editor / IDE
+.vscode/
+.idea/
+.cache/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# clangd / language server
+.clangd/
+.ccls-cache/
+
+# Coverage
+*.gcda
+*.gcno
+*.gcov
+coverage/
+*.profraw
+*.profdata
+
+# Local environment
+.env
+.envrc

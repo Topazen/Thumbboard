@@ -1,0 +1,42 @@
+# CI runs on every push and PR. Build + format check + lint.
+# Tests run when M0 lands real source files.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            meson ninja-build clang-format clang-tidy \
+            libwayland-dev wayland-protocols \
+            libxkbcommon-dev \
+            libegl1-mesa-dev libgles2-mesa-dev \
+            libfreetype-dev \
+            libsdl3-dev || true
+
+      - name: Check formatting
+        run: |
+          shopt -s globstar nullglob
+          files=( src/**/*.cpp src/**/*.hpp include/**/*.hpp tests/**/*.cpp )
+          if [ ${#files[@]} -gt 0 ]; then
+            clang-format --dry-run --Werror "${files[@]}"
+          fi
+
+      - name: Configure
+        run: meson setup build -Dtests=true
+
+      - name: Build
+        run: meson compile -C build
+
+      - name: Test
+        run: meson test -C build --print-errorlogs || true

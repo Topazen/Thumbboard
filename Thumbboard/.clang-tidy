@@ -1,0 +1,22 @@
+# Static analysis configuration. Run via:
+#   clang-tidy --config-file=.clang-tidy src/**/*.cpp
+# or let your editor's clangd integration pick it up.
+
+Checks: >
+  bugprone-*,
+  cert-*,
+  clang-analyzer-*,
+  cppcoreguidelines-*,
+  modernize-*,
+  performance-*,
+  portability-*,
+  readability-*,
+  -modernize-use-trailing-return-type,
+  -readability-magic-numbers,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -cppcoreguidelines-pro-bounds-array-to-pointer-decay,
+  -cppcoreguidelines-pro-bounds-pointer-arithmetic
+
+WarningsAsErrors: ''
+HeaderFilterRegex: '^(src|include)/.*'
+FormatStyle: file

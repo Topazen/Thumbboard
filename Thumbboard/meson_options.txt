@@ -1,0 +1,24 @@
+# Build-time options. Set with:  meson setup build -Dtests=true
+
+option(
+    'tests',
+    type : 'boolean',
+    value : true,
+    description : 'Build the unit and integration test binaries',
+)
+
+option(
+    'sanitizers',
+    type : 'combo',
+    choices : ['none', 'address', 'undefined', 'address+undefined'],
+    value : 'none',
+    description : 'Enable runtime sanitizers (debug builds only)',
+)
+
+option(
+    'logging',
+    type : 'combo',
+    choices : ['stderr', 'spdlog'],
+    value : 'stderr',
+    description : 'Logging backend',
+)
