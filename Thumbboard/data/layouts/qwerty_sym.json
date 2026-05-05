@@ -1,0 +1,45 @@
+{
+    "name": "qwerty_sym",
+    "language": "us",
+    "grid": { "cols": 10, "rows": 4 },
+    "keys": [
+        { "label": "!",  "keysym": "exclam",       "x": 0, "y": 0 },
+        { "label": "?",  "keysym": "question",     "x": 1, "y": 0 },
+        { "label": ";",  "keysym": "semicolon",    "x": 2, "y": 0 },
+        { "label": ":",  "keysym": "colon",        "x": 3, "y": 0 },
+        { "label": "~",  "keysym": "asciitilde",   "x": 4, "y": 0 },
+        { "label": "`",  "keysym": "grave",        "x": 5, "y": 0 },
+        { "label": "|",  "keysym": "bar",          "x": 6, "y": 0 },
+        { "label": "'",  "keysym": "apostrophe",   "x": 7, "y": 0 },
+        { "label": "\"", "keysym": "quotedbl",     "x": 8, "y": 0 },
+        { "label": "/",  "keysym": "slash",        "x": 9, "y": 0 },
+
+        { "label": "[",  "keysym": "bracketleft",  "x": 0, "y": 1 },
+        { "label": "]",  "keysym": "bracketright", "x": 1, "y": 1 },
+        { "label": "{",  "keysym": "braceleft",    "x": 2, "y": 1 },
+        { "label": "}",  "keysym": "braceright",   "x": 3, "y": 1 },
+        { "label": "^",  "keysym": "asciicircum",  "x": 4, "y": 1 },
+        { "label": "%",  "keysym": "percent",      "x": 5, "y": 1 },
+        { "label": "*",  "keysym": "asterisk",     "x": 6, "y": 1 },
+        { "label": "&",  "keysym": "ampersand",    "x": 7, "y": 1 },
+        { "label": "-",  "keysym": "minus",        "x": 8, "y": 1 },
+        { "label": "=",  "keysym": "equal",        "x": 9, "y": 1 },
+
+        { "label": "+",  "keysym": "plus",         "x": 0, "y": 2 },
+        { "label": "@",  "keysym": "at",           "x": 1, "y": 2 },
+        { "label": "#",  "keysym": "numbersign",   "x": 2, "y": 2 },
+        { "label": "$",  "keysym": "dollar",       "x": 3, "y": 2 },
+        { "label": "(",  "keysym": "parenleft",    "x": 4, "y": 2 },
+        { "label": ")",  "keysym": "parenright",   "x": 5, "y": 2 },
+        { "label": "<",  "keysym": "less",         "x": 6, "y": 2 },
+        { "label": ">",  "keysym": "greater",      "x": 7, "y": 2 },
+        { "label": "\\", "keysym": "backslash",    "x": 8, "y": 2 },
+        { "label": "<--","keysym": "BackSpace",    "x": 9, "y": 2 },
+
+        { "label": "ABC","keysym": "layer_next",   "x": 0, "y": 3, "w": 1 },
+        { "label": ",",                             "x": 1, "y": 3, "w": 1 },
+        { "label": " ", "keysym": "space",         "x": 2, "y": 3, "w": 6 },
+        { "label": ".",                             "x": 8, "y": 3, "w": 1 },
+        { "label": "RET","keysym": "Return",       "x": 9, "y": 3, "w": 1 }
+    ]
+}

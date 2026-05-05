@@ -22,11 +22,11 @@ wayland_client = dependency('wayland-client')
 wayland_egl    = dependency('wayland-egl')
 egl            = dependency('egl')
 glesv2         = dependency('glesv2')
+xkbcommon      = dependency('xkbcommon')
+freetype       = dependency('freetype2')
+nlohmann_json  = dependency('nlohmann_json')
 
-# xkbcommon, sdl3, freetype2 land in M1+
-# xkbcommon = dependency('xkbcommon')
-# sdl3      = dependency('sdl3')
-# freetype  = dependency('freetype2')
+sdl3 = dependency('sdl3')
 
 subdir('protocols')
 subdir('src')

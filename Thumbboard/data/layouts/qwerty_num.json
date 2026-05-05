@@ -1,0 +1,45 @@
+{
+    "name": "qwerty_num",
+    "language": "us",
+    "grid": { "cols": 10, "rows": 4 },
+    "keys": [
+        { "label": "1", "x": 0, "y": 0 },
+        { "label": "2", "x": 1, "y": 0 },
+        { "label": "3", "x": 2, "y": 0 },
+        { "label": "4", "x": 3, "y": 0 },
+        { "label": "5", "x": 4, "y": 0 },
+        { "label": "6", "x": 5, "y": 0 },
+        { "label": "7", "x": 6, "y": 0 },
+        { "label": "8", "x": 7, "y": 0 },
+        { "label": "9", "x": 8, "y": 0 },
+        { "label": "0", "x": 9, "y": 0 },
+
+        { "label": "@",  "keysym": "at",           "x": 0, "y": 1 },
+        { "label": "#",  "keysym": "numbersign",   "x": 1, "y": 1 },
+        { "label": "$",  "keysym": "dollar",       "x": 2, "y": 1 },
+        { "label": "%",  "keysym": "percent",      "x": 3, "y": 1 },
+        { "label": "^",  "keysym": "asciicircum",  "x": 4, "y": 1 },
+        { "label": "&",  "keysym": "ampersand",    "x": 5, "y": 1 },
+        { "label": "*",  "keysym": "asterisk",     "x": 6, "y": 1 },
+        { "label": "(",  "keysym": "parenleft",    "x": 7, "y": 1 },
+        { "label": ")",  "keysym": "parenright",   "x": 8, "y": 1 },
+        { "label": "_",  "keysym": "underscore",   "x": 9, "y": 1 },
+
+        { "label": "-",  "keysym": "minus",        "x": 0, "y": 2 },
+        { "label": "+",  "keysym": "plus",         "x": 1, "y": 2 },
+        { "label": "=",  "keysym": "equal",        "x": 2, "y": 2 },
+        { "label": "/",  "keysym": "slash",        "x": 3, "y": 2 },
+        { "label": "\\", "keysym": "backslash",    "x": 4, "y": 2 },
+        { "label": "<",  "keysym": "less",         "x": 5, "y": 2 },
+        { "label": ">",  "keysym": "greater",      "x": 6, "y": 2 },
+        { "label": ":",  "keysym": "colon",        "x": 7, "y": 2 },
+        { "label": ";",  "keysym": "semicolon",    "x": 8, "y": 2 },
+        { "label": "<--","keysym": "BackSpace",    "x": 9, "y": 2 },
+
+        { "label": "!#$","keysym": "layer_next",   "x": 0, "y": 3, "w": 1 },
+        { "label": ",",                             "x": 1, "y": 3, "w": 1 },
+        { "label": " ", "keysym": "space",         "x": 2, "y": 3, "w": 6 },
+        { "label": ".",                             "x": 8, "y": 3, "w": 1 },
+        { "label": "RET","keysym": "Return",       "x": 9, "y": 3, "w": 1 }
+    ]
+}

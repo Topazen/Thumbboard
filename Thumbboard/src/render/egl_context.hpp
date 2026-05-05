@@ -20,7 +20,7 @@ public:
     EglContext& operator=(const EglContext&) = delete;
 
     void resize(int width, int height);
-    void render_frame();
+    void swap_buffers();
 
 private:
     wl_egl_window* egl_window_ = nullptr;

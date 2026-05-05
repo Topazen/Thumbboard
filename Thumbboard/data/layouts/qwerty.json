@@ -1,0 +1,43 @@
+{
+    "name": "qwerty",
+    "language": "us",
+    "grid": { "cols": 10, "rows": 4 },
+    "keys": [
+        { "label": "q", "alt": "1", "x": 0,  "y": 0 },
+        { "label": "w", "alt": "2", "x": 1,  "y": 0 },
+        { "label": "e", "alt": "3", "x": 2,  "y": 0 },
+        { "label": "r", "alt": "4", "x": 3,  "y": 0 },
+        { "label": "t", "alt": "5", "x": 4,  "y": 0 },
+        { "label": "y", "alt": "6", "x": 5,  "y": 0 },
+        { "label": "u", "alt": "7", "x": 6,  "y": 0 },
+        { "label": "i", "alt": "8", "x": 7,  "y": 0 },
+        { "label": "o", "alt": "9", "x": 8,  "y": 0 },
+        { "label": "p", "alt": "0", "x": 9,  "y": 0 },
+
+        { "label": "a", "x": 0.5, "y": 1 },
+        { "label": "s", "x": 1.5, "y": 1 },
+        { "label": "d", "x": 2.5, "y": 1 },
+        { "label": "f", "x": 3.5, "y": 1 },
+        { "label": "g", "x": 4.5, "y": 1 },
+        { "label": "h", "x": 5.5, "y": 1 },
+        { "label": "j", "x": 6.5, "y": 1 },
+        { "label": "k", "x": 7.5, "y": 1 },
+        { "label": "l", "x": 8.5, "y": 1 },
+
+        { "label": "SHIFT", "keysym": "Shift_L",   "x": 0,   "y": 2, "w": 1.5 },
+        { "label": "z", "x": 1.5, "y": 2 },
+        { "label": "x", "x": 2.5, "y": 2 },
+        { "label": "c", "x": 3.5, "y": 2 },
+        { "label": "v", "x": 4.5, "y": 2 },
+        { "label": "b", "x": 5.5, "y": 2 },
+        { "label": "n", "x": 6.5, "y": 2 },
+        { "label": "m", "x": 7.5, "y": 2 },
+        { "label": "<--", "keysym": "BackSpace",   "x": 8.5, "y": 2, "w": 1.5 },
+
+        { "label": "123",   "keysym": "layer_next",      "x": 0, "y": 3, "w": 1   },
+        { "label": ",",                                  "x": 1, "y": 3, "w": 1   },
+        { "label": " ",     "keysym": "space",           "x": 2, "y": 3, "w": 6   },
+        { "label": ".",                                  "x": 8, "y": 3, "w": 1   },
+        { "label": "RET",   "keysym": "Return",          "x": 9, "y": 3, "w": 1   }
+    ]
+}

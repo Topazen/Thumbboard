@@ -14,15 +14,18 @@ gen_h = generator(
 wayland_protocols_dep = dependency('wayland-protocols')
 wp_datadir = wayland_protocols_dep.get_variable('pkgdatadir')
 
-layer_shell_xml = files('wlr-layer-shell-unstable-v1.xml')
-xdg_shell_xml   = files(join_paths(wp_datadir, 'stable/xdg-shell/xdg-shell.xml'))
+layer_shell_xml    = files('wlr-layer-shell-unstable-v1.xml')
+virtual_kbd_xml    = files('virtual-keyboard-unstable-v1.xml')
+xdg_shell_xml      = files(join_paths(wp_datadir, 'stable/xdg-shell/xdg-shell.xml'))
 
 proto_src = [
     gen_c.process(layer_shell_xml),
+    gen_c.process(virtual_kbd_xml),
     gen_c.process(xdg_shell_xml),
 ]
 proto_hdr = [
     gen_h.process(layer_shell_xml),
+    gen_h.process(virtual_kbd_xml),
     gen_h.process(xdg_shell_xml),
 ]
 

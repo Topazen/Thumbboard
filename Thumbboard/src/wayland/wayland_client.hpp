@@ -6,7 +6,9 @@ struct wl_display;
 struct wl_registry;
 struct wl_compositor;
 struct wl_surface;
+struct wl_seat;
 struct zwlr_layer_shell_v1;
+struct zwp_virtual_keyboard_manager_v1;
 
 namespace thumbboard::wayland {
 
@@ -34,6 +36,12 @@ public:
     zwlr_layer_shell_v1* layer_shell() const {
         return layer_shell_;
     }
+    wl_seat* seat() const {
+        return seat_;
+    }
+    zwp_virtual_keyboard_manager_v1* vk_manager() const {
+        return vk_manager_;
+    }
 
     // Public so they can be referenced in file-scope Wayland listener structs.
     static void registry_global(
@@ -48,6 +56,8 @@ private:
     wl_registry* registry_ = nullptr;
     wl_compositor* compositor_ = nullptr;
     zwlr_layer_shell_v1* layer_shell_ = nullptr;
+    wl_seat* seat_ = nullptr;
+    zwp_virtual_keyboard_manager_v1* vk_manager_ = nullptr;
 };
 
 } // namespace thumbboard::wayland

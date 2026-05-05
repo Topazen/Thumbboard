@@ -8,6 +8,7 @@
 #include <cstdlib>
 #include <cstring>
 
+#include "virtual-keyboard-unstable-v1-client-protocol.h"
 #include "wlr-layer-shell-unstable-v1-client-protocol.h"
 
 namespace thumbboard::wayland {
@@ -45,9 +46,23 @@ WaylandClient::WaylandClient() {
         );
         std::exit(1);
     }
+    if (vk_manager_ == nullptr) {
+        std::fprintf(
+            stderr,
+            "thumbboard: compositor does not support "
+            "zwp_virtual_keyboard_manager_v1 — cannot inject keystrokes\n"
+        );
+        std::exit(1);
+    }
 }
 
 WaylandClient::~WaylandClient() {
+    if (vk_manager_ != nullptr) {
+        zwp_virtual_keyboard_manager_v1_destroy(vk_manager_);
+    }
+    if (seat_ != nullptr) {
+        wl_seat_destroy(seat_);
+    }
     if (layer_shell_ != nullptr) {
         zwlr_layer_shell_v1_destroy(layer_shell_);
     }
@@ -103,6 +118,14 @@ void WaylandClient::on_global(
     } else if (std::strcmp(interface, zwlr_layer_shell_v1_interface.name) == 0) {
         layer_shell_ = static_cast<zwlr_layer_shell_v1*>(
             wl_registry_bind(registry, name, &zwlr_layer_shell_v1_interface, std::min(version, 1U))
+        );
+    } else if (std::strcmp(interface, wl_seat_interface.name) == 0) {
+        seat_ = static_cast<wl_seat*>(
+            wl_registry_bind(registry, name, &wl_seat_interface, std::min(version, 7U))
+        );
+    } else if (std::strcmp(interface, zwp_virtual_keyboard_manager_v1_interface.name) == 0) {
+        vk_manager_ = static_cast<zwp_virtual_keyboard_manager_v1*>(
+            wl_registry_bind(registry, name, &zwp_virtual_keyboard_manager_v1_interface, 1U)
         );
     }
 }

@@ -140,9 +140,7 @@ void EglContext::resize(int width, int height) {
     wl_egl_window_resize(egl_window_, width, height, 0, 0);
 }
 
-void EglContext::render_frame() {
-    glClearColor(0.05F, 0.08F, 0.12F, 0.9F);
-    glClear(GL_COLOR_BUFFER_BIT);
+void EglContext::swap_buffers() {
     eglSwapBuffers(egl_display_, egl_surface_);
 }
 
